@@ -19,6 +19,8 @@ echo "socat TCP-LISTEN:8088,fork,reuseaddr TCP:$IP:8088 & disown" >>/etc/Tunneli
 chmod 700 /etc/Tunneling/port_forward.sh
 chmod 700 /etc/Tunneling/reboot.sh
 
+/etc/Tunneling/port_forward.sh
+
 echo > /etc/cron.d/port_forward_job
 echo "# AutoPortForward" >>/etc/cron.d/port_forward_job
 echo "@reboot root /etc/Tunneling/port_forward.sh" >>/etc/cron.d/port_forward_job
