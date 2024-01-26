@@ -63,3 +63,4 @@ echo -e "======================================"
 exit
 ;;
   *) echo -e "${RED}\nInvalid Option. ;;
+exit
